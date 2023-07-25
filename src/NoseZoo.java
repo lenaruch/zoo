@@ -9,6 +9,10 @@ public class NoseZoo {
 
     public void speakAll(){
         for (Speakable speakable: speakables){
+            if (speakable instanceof Cat){
+                Cat cat = (Cat) speakable;
+                System.out.println(cat.getName() + " говорит: ");
+            }
             speakable.speak();
         }
     }
